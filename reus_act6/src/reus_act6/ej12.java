@@ -27,11 +27,16 @@ public class ej12 {
 	}
 
 	public static void MostrarFinal(int array[], int numfinal) {
+		int cont = 0;
 		for (int i = 0; i < array.length; i++) {
 	    	if (array[i]%10 == numfinal) {
 	        	System.out.println(array[i]+ " acaba en " + numfinal);
+	        	cont++;
 	        }
 	    }
+		if (cont ==0) {
+			System.out.println("no hay ninguno que acabe en "+ numfinal);
+		}
 	}
 }
 
