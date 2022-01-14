@@ -28,15 +28,16 @@ public class ej11 {
         mostrarArray(array3);
     }
 
-    public static void rellenarAleatoriosArray(int lista[], int a, int b) {
-        for(int i = 0; i < lista.length; i++) {
-            lista[i] = ((int)Math.floor(Math.random()*(a-b)+b));
+    public static void rellenarAleatoriosArray(int array[], int a, int b) {
+        for(int i = 0; i < array.length; i++) {
+        	array[i] = ((int)Math.floor(Math.random()*(a-b)+b));
         }
     }
 
-    public static void mostrarArray(int lista[]) {
-        for(int i = 0; i < lista.length; i++) {
-            System.out.println("En el indice " + i + " esta el valor " + lista[i]);
+    public static void mostrarArray(int array[]) {
+    	System.out.println("----------------------------------------");
+    	for(int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
     }
 

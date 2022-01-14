@@ -9,7 +9,7 @@ public class ej12 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n1 = Integer.parseInt(JOptionPane.showInputDialog("tamaño de array"));
-		String numfinal = JOptionPane.showInputDialog("diga en que numero quiere que acabe");
+		int numfinal = Integer.parseInt(JOptionPane.showInputDialog("diga en que numero quiere que acabe"));
 		int array[]= new int[n1];	
 		RellenarArray(array);
 		MostrarFinal(array,numfinal );
@@ -22,16 +22,14 @@ public class ej12 {
 	
 		for (int i = 0; i < array.length; i++) {
 			int n1 = claseRandom.nextInt(300);
-
+			array[i] = n1;
 		}
 	}
 
-	public static void MostrarFinal(int array[], String numfinal) {
-		String num;
+	public static void MostrarFinal(int array[], int numfinal) {
 		for (int i = 0; i < array.length; i++) {
-	    	num = Integer.toString(array[i]);
-	    	if (num.contains(numfinal)) {
-	        	System.out.println("Esta es la eleccion "+array[i]);
+	    	if (array[i]%10 == numfinal) {
+	        	System.out.println(array[i]+ " acaba en " + numfinal);
 	        }
 	    }
 	}
